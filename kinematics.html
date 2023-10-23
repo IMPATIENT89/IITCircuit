@@ -1,0 +1,1292 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>Kinematics</title>
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC"
+      crossorigin="anonymous"
+    />
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <link
+      href="https://fonts.googleapis.com/css?family=Pacifico"
+      rel="stylesheet"
+    />
+    <script src="https://unpkg.com/typeit@8.7.1/dist/index.umd.js"></script>
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/icon?family=Material+Icons"
+    />
+    <meta name="viewport" content="width=device-width" , initial-scale=1.0">
+    <link rel="stylesheet" type="text/css" href="kinematics.css" />
+  </head>
+  <body>
+    <div class="container">
+      <div class="card">
+        <div class="card-body">
+          <div class="jumbotron">
+            <h1 class="display-4">Kinematics</h1>
+            <p class="lead" id="tagline">Analysis of motion without discussing cause of motion!</p>
+            <hr class="my-4" />
+          </div>
+          <div class="accordion" id="content">
+            <div class="accordion-item" data-read-time="10">
+              <h2 class="accordion-header" id="section-fluid-mechanics">
+                <button
+                  class="accordion-button collapsed"
+                  type="button"
+                  data-bs-toggle="collapse"
+                  data-bs-target="#section-fluid-mechanics-heading"
+                  aria-expanded="false"
+                  aria-controls="section-fluid-mechanics-heading"
+                >
+                  <strong>Introduction to Kinematics</strong>
+                </button>
+              </h2>
+              <div
+                id="section-fluid-mechanics-heading"
+                class="accordion-collapse collapse"
+                aria-labelledby="section-fluid-mechanics-content"
+                data-bs-parent="#content"
+              >
+                <div class="accordion-body">
+                  <p>
+                    Kinematics is employed to establish connections between
+                    displacement, velocity, acceleration, and time, independent
+                    of the factors driving the motion. This discussion will
+                    focus on the kinematics of objects, regardless of whether
+                    they are as small as particles or as large as humans,
+                    automobiles, rockets, or airplanes, without taking into
+                    account their specific shape and size.
+                  </p>
+                  <p><strong>Some type of motions: </strong></p>
+
+                  <div class="">
+                    <img src="stlm.gif" alt="stlm" class="mt-3" />
+                    <img src="cm.gif" alt="circular motion" class="cm ms-5" />
+                    <img src="oscillatory.gif" alt="oscillatory motion" class="cm ms-5" />
+                    <img src="projectile2.gif" alt="oscillatory motion" class="cm ms-5" style="width: 300px;" />
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="accordion-item" data-read-time="10">
+              <h2 class="accordion-header" id="section-distance-displacement">
+                <button
+                  class="accordion-button collapsed"
+                  type="button"
+                  data-bs-toggle="collapse"
+                  data-bs-target="#section-distance-displacement-heading"
+                  aria-expanded="false"
+                  aria-controls="section-distance-displacement-heading"
+                >
+                  <strong>Distance and Displacement</strong>
+                </button>
+              </h2>
+              <div
+                id="section-distance-displacement-heading"
+                class="accordion-collapse collapse"
+                aria-labelledby="section-distance-displacement-content"
+                data-bs-parent="#content"
+              >
+                <div class="accordion-body">
+                  <h5 class="text-muted">
+                    <strong>Distance</strong>
+                  </h5>
+                  <p>
+                    Distance represents the total length traveled by a moving
+                    particle or object within a specified time frame. It is
+                    denoted by S generally.
+                  </p>
+                  <p>SI unit of distance is m. And it is a scalar quantity.</p>
+                  <h5 class="text-muted">
+                    <strong>Displacement</strong>
+                  </h5>
+                  <p>
+                    The displacement denotes the alteration in the position
+                    vector, specifically, the vector connecting the initial and
+                    final positions. In short displacement is the shortest
+                    possible path between the initial and final position.
+                  </p>
+                  <p>
+                    It's SI unit is m. And obviusly it is a vector quantity.
+                  </p>
+                  <p>
+                    If a particle journeys from point A to point C along the
+                    route ABC as shown below
+                  </p>
+                  <div class="text-center">
+                    <img src="dnd.png" alt="" class="cm" />
+                  </div>
+
+                  <p>
+                    The distance covered corresponds to the actual path length
+                    ABC, whereas the displacement can be expressed as:
+                    \[\Delta{r} = \vec{r} = \vec{r_c} - \vec{r_a} \]
+                  </p>
+                  <p>
+                    When a particle undergoes motion in a straight line without
+                    any change in direction, the magnitude of its displacement
+                    is equivalent to the distance traveled. However, in cases
+                    where the particle changes direction during its motion, the
+                    displacement is consistently less than the total distance
+                    traveled. Thus,
+                  </p>
+                  <p>\[ {|displacement|} \leq {|distance|} \]</p>
+                  <p>
+                    A paticle starts to perform circular motion in a circle of
+                    radius r and it came back to initial position after
+                    completing the circular path.
+                  </p>
+                  <p>
+                    <interaction
+                      true-response="Yes, you are right. You must have understood that the distance is the actual path travelled by the particle. Thus, the distance will be the circumference of the circle."
+                      false-response="No. You have confusion between distance and displacement. The distance is the actual path travelled by the particle. Thus, the distance covered will be the circumference of the circle."
+                      ansKey="true"
+                    >
+                      What will be the distance covered by the particle?
+                      <response
+                        class="badge bg-light text-dark"
+                        responseValue="true"
+                      >
+                        2πr
+                      </response>
+                      <response
+                        class="badge bg-light text-dark"
+                        responseValue="false"
+                      >
+                        0 </response
+                      ><br />
+                      <result> </result>
+                    </interaction>
+                  </p>
+                  <p>
+                    <interaction
+                      true-response="Yes, you are right. You must have understood that the displacement is nothing but the shortest path between initial and final position. Thus, in this scenario displacement is 0."
+                      false-response="No. The displacement is nothing but the shortest path between initial and final position. Thus, in this scenario displacement is 0."
+                      ansKey="true"
+                    >
+                      What will be the displacement of the partilce?
+                      <response
+                        class="badge bg-light text-dark"
+                        responseValue="false"
+                      >
+                        2πr
+                      </response>
+                      <response
+                        class="badge bg-light text-dark"
+                        responseValue="true"
+                      >
+                        0 </response
+                      ><br />
+                      <result> </result>
+                    </interaction>
+                  </p>
+                </div>
+              </div>
+            </div>
+            <div class="accordion-item" data-read-time="10">
+              <h2 class="accordion-header" id="section-avg-speed-velocity">
+                <button
+                  class="accordion-button collapsed"
+                  type="button"
+                  data-bs-toggle="collapse"
+                  data-bs-target="#section-avg-speed-velocity-heading"
+                  aria-expanded="false"
+                  aria-controls="section-avg-speed-velocity-heading"
+                >
+                  <strong>Average Speed and Average Velocity</strong>
+                </button>
+              </h2>
+              <div
+                id="section-avg-speed-velocity-heading"
+                class="accordion-collapse collapse"
+                aria-labelledby="section-avg-speed-velocity-content"
+                data-bs-parent="#content"
+              >
+                <div class="accordion-body">
+                  <h5 class="text-muted">
+                    <strong>Average Speed</strong>
+                  </h5>
+                  <p>
+                    The average speed of a particle in a time interval is
+                    defined as the distance travelled by the particle divided by
+                    the time interval.
+                  </p>
+                  <p>
+                    Mathematically, average speed can be expressed as:
+                    \[v_{\text{avg}} = \frac{\text{Total Distance Traveled}}{\text{Time Interval}}\]
+                  </p>
+                  <p>
+                    It's SI unit is m/s. And avergae speed is a scalar quantity
+                  </p>
+                  <p>
+                    <interaction
+                      true-response="Yes, you are right. As Distance would be always greater or equal to zero. Also, Average Speed is a scalar quantity. Then, Average Speed must have positive value always."
+                      false-response="No. Average Speed can't be negative in any case. But it can be zero."
+                      ansKey="true"
+                    >
+                      Average Speed would be always ___
+                      <response
+                        class="badge bg-light text-dark"
+                        responseValue="true"
+                      >
+                        Positive
+                      </response>
+                      <response
+                        class="badge bg-light text-dark"
+                        responseValue="false"
+                      >
+                        Negative </response
+                      ><br />
+                      <result> </result>
+                    </interaction>
+                  </p>
+                  <h5 class="text-muted">
+                    <strong>Average Velocity</strong>
+                  </h5>
+                  <p>
+                    The average velocity of a particle in a time interval is
+                    defined as the displacement of the particle divided by the
+                    time interval.
+                  </p>
+                  <p>
+                    It's SI unit is m/s. And avergae speed is a vector quantity
+                  </p>
+                  <p>
+                    Mathematically, average velocity can be expressed as:
+                    \[\vec{v}_{\text{avg}} = \frac{\text{Total Displacement in a time interval}}{\text{Time Interval}}\]
+                  </p>
+                  <div class="text-center">
+                    <img src="dnd.png" alt="" class="cm" />
+                  </div>
+                  <p>
+                    For a particle starting from A and reaching to C. Average
+                    Velocity can be expressed as: \[\vec{v}_{\text{avg}} =
+                    \frac{\Delta{\vec{r}}}{\Delta{t}} = \frac{\vec{r_c} -
+                    \vec{r_a}}{\Delta{t}} \]
+                  </p>
+                  <p>
+                    <interaction
+                      true-response="Yes, you are right. Average velocity is a vector quantity. It is always a single valued function in a given interval of time. However mangnitude or direction can be same for more than two instants. But magnitude and direction both can't be exactly same for more than one point."
+                      false-response="No, you're wrong. Average velocity is a vector quantity. It is always a single valued function in a given interval of time. However mangnitude or direction can be same for more than two instants. But magnitude and direction both can't be exactly same for more than one point."
+                      ansKey="true"
+                    >
+                      For a moving particle in a given interval of time, average
+                      velocity must be a
+                      <response
+                        class="badge bg-light text-dark"
+                        responseValue="true"
+                      >
+                        single-valued function
+                      </response>
+                      <response
+                        class="badge bg-light text-dark"
+                        responseValue="false"
+                      >
+                        multi-valued function </response
+                      ><br />
+                      <result> </result>
+                    </interaction>
+                  </p>
+                </div>
+              </div>
+            </div>
+            <div class="accordion-item" data-read-time="10">
+              <h2 class="accordion-header" id="section-inst-speed-velocity">
+                <button
+                  class="accordion-button collapsed"
+                  type="button"
+                  data-bs-toggle="collapse"
+                  data-bs-target="#section-inst-speed-velocity-heading"
+                  aria-expanded="false"
+                  aria-controls="section-inst-speed-velocity-heading"
+                >
+                  <strong
+                    >Instantaneous Velocity and Instantaneous Speed
+                  </strong>
+                </button>
+              </h2>
+              <div
+                id="section-inst-speed-velocity-heading"
+                class="accordion-collapse collapse"
+                aria-labelledby="section-inst-speed-velocity-content"
+                data-bs-parent="#content"
+              >
+                <div class="accordion-body">
+                  <h5 class="text-muted">Instantaneous Velocity</h5>
+                  <p>
+                    The instantaneous velocity of a particle at a given time
+                    \(t\) is defined as follows. Consider the average velocity
+                    of the particle over a very short time interval from \(t\)
+                    to \(t + \Delta t\), denoted as \(\vec{v}_{\text{avg}}\).
+                    This average velocity can be expressed as: \[
+                    \vec{v}_{\text{avg}} = \frac{\Delta \vec{r}}{\Delta t} \]
+                    Here, \(\Delta \vec{r}\) represents the displacement that
+                    occurs during the time interval \(\Delta t\).
+                  </p>
+                  <p>
+                    Now, as we reduce \(\Delta t\) to an infinitesimally small
+                    value, we can determine the limit of \(\frac{\Delta
+                    \vec{r}}{\Delta t}\) as \(\Delta t\) approaches zero. This
+                    limit represents the instantaneous velocity \(\vec{v}\) of
+                    the particle at time \(t\), and it can be expressed as: \[
+                    \vec{v} = \lim_{{\Delta t \to 0}} \frac{\Delta
+                    \vec{r}}{\Delta t} = \frac{d\vec{r}}{dt} \] In this context,
+                    \(\frac{d\vec{r}}{dt}\) signifies the rate of change of the
+                    displacement vector \(\vec{r}\) with respect to time \(t\),
+                    which gives the instantaneous velocity of the particle at
+                    the specific time \(t\).
+                  </p>
+                  <h5 class="text-muted">Instantaneous Speed</h5>
+                  <p>
+                    For very small time intervals, the displacement \(\Delta
+                    \vec{r}\) occurs along the path of the particle's motion. In
+                    this case, the magnitude of \(\Delta \vec{r}\) is equal to
+                    the distance \(\Delta s\) traveled during that interval.
+                    Therefore, the magnitude of velocity is given by: \[v =
+                    \left|\frac{d\vec{r}}{dt}\right| = \frac{|\Delta
+                    \vec{r}|}{\Delta t} = \frac{\Delta s}{\Delta t} \]
+                  </p>
+                  <p>
+                    This magnitude represents the instantaneous speed at time
+                    \(t\). Simply instantaneous speed ia the magnitude of
+                    instantaneous velocity and can be mathematically expressed
+                    as: \[v = |\vec{v}| \]
+                  </p>
+                  <p>
+                    <interaction
+                      true-response="Yes, you are right. Speed is slope of the distance-time graph because speed is derivative of distance with respect to time. Graph of A is steeper means it has more slope than B. Thus, Speed of A is greater than B."
+                      false-response="No. Try to understand that slope of graph is it's derivative. Speed is slope of the distance-time graph because speed is derivative of distance with respect to time. Graph of A is steeper means it has more slope than B. Thus, Speed of A is greater than B."
+                      ansKey="true"
+                    >
+                      In a distance - time graph, motion of two cars A & B is
+                      plotted in the form of a Straight line. If the line on the
+                      graph is steeper for A as compared to B, What can you
+                      infer from the graph?
+                      <response
+                        class="badge bg-light text-dark"
+                        responseValue="true"
+                      >
+                        Speed of A is greate than B
+                      </response>
+                      <response
+                        class="badge bg-light text-dark"
+                        responseValue="false"
+                      >
+                        Speed of B is greater than A </response
+                      ><br />
+                      <result> </result>
+                    </interaction>
+                  </p>
+                </div>
+              </div>
+            </div>
+            <div class="accordion-item" data-read-time="10">
+              <h2 class="accordion-header" id="section-avg-inst-acc">
+                <button
+                  class="accordion-button collapsed"
+                  type="button"
+                  data-bs-toggle="collapse"
+                  data-bs-target="#section-avg-inst-acc-heading"
+                  aria-expanded="false"
+                  aria-controls="section-avg-inst-acc-heading"
+                >
+                  <strong>Average and Instantaneous Acceleration </strong>
+                </button>
+              </h2>
+              <div
+                id="section-avg-inst-acc-heading"
+                class="accordion-collapse collapse"
+                aria-labelledby="section-avg-inst-acc-content"
+                data-bs-parent="#content"
+              >
+                <div class="accordion-body">
+                  <h5 class="text-muted">Average Acceleration</h5>
+                  <p>
+                    Average acceleration is defined as the ratio of the change
+                    in velocity, denoted as \(\Delta \vec{v}\), to the time
+                    interval \(\Delta t\) during which this change takes place.
+                    Therefore, the average acceleration
+                    (\(\vec{a}_{\text{avg}}\)) is calculated as follows: \[
+                    \vec{a}_{\text{avg}} = \frac{\Delta \vec{v}}{\Delta t} =
+                    \frac{\vec{v_f} - \vec{v_i}}{\Delta t} \] Here,
+                    \(\vec{v_f}\) represents the final velocity vector, and
+                    \(\vec{v_i}\) represents the initial velocity vector.
+                  </p>
+                  <h5 class="text-muted">Instantaneous Acceleration</h5>
+                  <p>
+                    The instantaneous acceleration, on the other hand, is
+                    defined at a specific instant in time and is expressed as
+                    the limit when \(\Delta t\) approaches zero. It can be
+                    represented as: \[ \vec{a} = \lim_{{\Delta t \to 0}}
+                    \frac{\Delta \vec{v}}{\Delta t} = \frac{d\vec{v}}{dt} \]
+                  </p>
+                </div>
+              </div>
+            </div>
+            <div class="accordion-item" data-read-time="10">
+              <h2 class="accordion-header" id="section-stlm">
+                <button
+                  class="accordion-button collapsed"
+                  type="button"
+                  data-bs-toggle="collapse"
+                  data-bs-target="#section-stlm-heading"
+                  aria-expanded="false"
+                  aria-controls="section-stlm-heading"
+                >
+                  <strong>Straight line Motion</strong>
+                </button>
+              </h2>
+              <div
+                id="section-stlm-heading"
+                class="accordion-collapse collapse"
+                aria-labelledby="section-stlm-content"
+                data-bs-parent="#content"
+              >
+                <div class="accordion-body">
+                  <p>
+                    When a particle is constrained to move along a straight
+                    line, the description becomes relatively straightforward.
+                  </p>
+                  <p>
+                    We select the straight line as the X-axis and designate a
+                    convenient moment in time as \(t = 0\). Typically, the
+                    origin is defined at the location where the particle is
+                    positioned at \(t = 0\).
+                  </p>
+                  <p>
+                    The particle's position at any given time \(t\) is then
+                    represented by its coordinate \(x\) at that time. The
+                    velocity of the particle, in this context, is a measure of
+                    how the position \(x\) changes concerning time \(t\) can be
+                    written as: \[\vec{v} = \frac{d{\vec{x}}}{dt} \]
+                  </p>
+                  <p>
+                    And the acceleration can be expressed as: \[\vec{a} =
+                    \frac{d{\vec{v}}}{dt} =
+                    \frac{d}{dt}\left(\frac{d{\vec{x}}}{dt}\right) =
+                    \frac{d^2{\vec{x}}}{dt^2}\]
+                  </p>
+                  <ul class="list-group list-group-flush">
+                    <li class="list-group-item d-flex">
+                      <details>
+                        <summary>Motion under constant Acceleration</summary>
+                        <p>
+                          Suppose the acceleration of a particle is constant and
+                          denoted as \(a\). Furthermore, let the particle's
+                          initial velocity at time \(0\) be \(u\), and the
+                          velocity at time \(t\) be \(v\).
+                        </p>
+                        <p>
+                          At \(t\) = 0 the particle is at \(x\) = 0. As time
+                          changes from 0 to \(t\) the position changes from 0 to
+                          \(s\).
+                        </p>
+                        <p>
+                          In this scenario, you can express the relationship
+                          between these variables using the following equations:
+                        </p>
+                        <p>
+                          \[v = u + at \] \[s = ut+\frac{1}{2}at^2 \] \[v^2 =
+                          u^2 + 2as \]
+                        </p>
+                        <p>
+                          Remember that \(x\) represents the position of the
+                          particle at time \(t\) and not (in general) the
+                          distance travelled by it in time 0 to \(t\)
+                        </p>
+                        <p>
+                          <interaction
+                            true-response="Yes, you are right. If both have opposite sign then acceleration will become deacceleration if we consider velocity direction as positive. This will reduce the speed of the object."
+                            false-response="No, You're wrong. If both have opposite sign then acceleration will become deacceleration if we consider velocity direction as positive. This will reduce the speed of the object."
+                            ansKey="true"
+                          >
+                            If the velocity and acceleration have opposite sign,
+                            object is
+                            <response
+                              class="badge bg-light text-dark"
+                              responseValue="false"
+                            >
+                              speeding up
+                            </response>
+                            <response
+                              class="badge bg-light text-dark"
+                              responseValue="true"
+                            >
+                              slowing down </response
+                            ><br />
+                            <result> </result>
+                          </interaction>
+                        </p>
+                      </details>
+                    </li>
+                    <li class="list-group-item d-flex">
+                      <details>
+                        <summary>Free Fall</summary>
+                        <p>
+                          Certainly, the classic example of motion in a straight
+                          line with constant acceleration is free fall near the
+                          Earth's surface. In this scenario, when we neglect air
+                          resistance and a body is dropped from rest near the
+                          Earth's surface, it falls along a vertical straight
+                          line.
+                        </p>
+                        <p>
+                          The acceleration experienced by the body due to
+                          gravity is in the vertically downward direction, and
+                          its magnitude is nearly constant if the height from
+                          which the object falls is much smaller than the radius
+                          of the Earth (approximately 6400 kilometers). This
+                          constant acceleration is approximately equal to
+                          \(9.8m/s^2 \)
+                        </p>
+                        <p>
+                          In the context of motion along the vertical axis with
+                          vertically upward as the positive Y-axis, and with
+                          acceleration due to gravity acting downward, you can
+                          express the equations of motion as follows:
+                        </p>
+                        <p>
+                          <strong
+                            >1. Equation for Velocity at Time \(t\):</strong
+                          >
+                          \[v = u - gt\] Here, \(v\) represents the velocity in
+                          the Y-direction at time \(t\), \(u\) is the initial
+                          velocity in the Y-direction at \(t = 0\), and \(g\) is
+                          the acceleration due to gravity (\(g = 9.8 \,
+                          \text{m/s}^2\) or \(32 \, \text{ft/s}^2\)).
+                        </p>
+                        <p>
+                          <strong
+                            >2. Equation for Displacement at Time \(t\):</strong
+                          >
+                          \[y = ut - \frac{1}{2}gt^2\] In this equation, \(y\)
+                          denotes the Y-coordinate, which represents the height
+                          above the origin at time \(t\). The variables \(u\),
+                          \(g\), and \(t\) have the same meanings as in the
+                          first equation.
+                        </p>
+                        <p>
+                          <strong
+                            >3. Equation for Velocity at Time \(t\) in Terms of
+                            Displacement:</strong
+                          >
+                          \[v^2 = u^2 - 2gy\] This equation relates the final
+                          velocity (\(v\)) to the initial velocity (\(u\)) and
+                          the displacement (\(y\)) in the Y-direction. It
+                          demonstrates how the velocity changes as an object
+                          moves vertically under gravity.
+                        </p>
+                        <p>
+                          In these equations, \(u\) is the initial velocity in
+                          the Y-direction at time \(t = 0\), \(v\) is the
+                          velocity in the Y-direction at time \(t\), and \(y\)
+                          is the displacement (height above the origin) at time
+                          \(t\). The negative sign in the acceleration term (-g)
+                          signifies that gravity acts in the negative
+                          Y-direction. These equations are fundamental in the
+                          analysis of motion in free fall near the Earth's
+                          surface.
+                        </p>
+                        <p>
+                          <interaction
+                            true-response="Yes, you are right. Initial velocity of the ball is 0. And gravity due to acceleration is g downwards. Applying <math xmlns='http://www.w3.org/1998/Math/MathML'><msup>
+                              <mi>v</mi>
+                              <mn>2</mn>
+                            </msup>
+                            <mo>=</mo>
+                            <msup>
+                              <mi>u</mi>
+                              <mn>2</mn>
+                            </msup>
+                            <mo>+</mo>
+                            <mn>2</mn>
+                            <mi>a</mi>
+                            <mi>s</mi></math>. We will get <math xmlns='http://www.w3.org/1998/Math/MathML'><mi>v</mi><mo>=</mo><msqrt><mrow><mn>2</mn><mi>g</mi><mi>H</mi></mrow></msqrt></math>."
+                            false-response="No, You're wrong. You can think of the dimensions. Or by, applying <math xmlns='http://www.w3.org/1998/Math/MathML'><msup>
+                              <mi>v</mi>
+                              <mn>2</mn>
+                            </msup>
+                            <mo>=</mo>
+                            <msup>
+                              <mi>u</mi>
+                              <mn>2</mn>
+                            </msup>
+                            <mo>+</mo>
+                            <mn>2</mn>
+                            <mi>a</mi>
+                            <mi>s</mi></math>. We will get <math xmlns='http://www.w3.org/1998/Math/MathML'><mi>v</mi><mo>=</mo><msqrt><mrow><mn>2</mn><mi>g</mi><mi>H</mi></mrow></msqrt></math>."
+                            .
+                            ansKey="true"
+                          >
+                            An object is released from a tower of Height H. What
+                            is the speed of ball at the time of hitting the
+                            ground?
+                            <response
+                              class="badge bg-light text-dark"
+                              responseValue="false"
+                            >
+                              \(2gH \)
+                            </response>
+                            <response
+                              class="badge bg-light text-dark"
+                              responseValue="true"
+                            >
+                              \(\sqrt{\text{2gH}} \) </response
+                            ><br />
+                            <result> </result>
+                          </interaction>
+                        </p>
+                      </details>
+                    </li>
+                    <li class="list-group-item d-flex">
+                      <details>
+                        <summary>Vetically upward thrown bodies</summary>
+                        <p>
+                          An example of motion in a straight line can be when a
+                          body is thrown vertically upwards from the Earth's
+                          surface. In this scenario, when we neglect air
+                          resistance and the body will follow a vertical
+                          straight motion.This type of motion is often referred
+                          to as "vertical projectile motion."
+                        </p>
+                        <p>
+                          The motion involves two directions: ascending and
+                          descending. As the object moves upward, it eventually
+                          reaches its highest point before beginning its
+                          descent.
+                        </p>
+                        <p>
+                          In the context of motion along the vertical axis with
+                          vertically upward as the positive Y-axis, and with
+                          acceleration due to gravity acting downward.
+                        </p>
+                        <p>
+                          Let us suppose that a body is thrown vertically
+                          upwards with initial velocity \(u\). And the
+                          acceleration due to gravity is \(g\).
+                        </p>
+                        <p><strong>While Ascending: </strong></p>
+                        <p>
+                          <strong
+                            >1. Equation for Velocity at Time \(t\):</strong
+                          >
+                          \[v_{\text{top}} = u - gt_1\] Here, \(v_{\text{top}}\)
+                          represents the velocity of the particle at topmost
+                          point which is acheived after time \(t_1\),
+                        </p>
+                        <p>
+                          <strong
+                            >2. Equation for Displacement at Time \(t\):</strong
+                          >
+                          \[H = ut_1 - \frac{1}{2}gt_1^2\] In this equation,
+                          \(H\) denotes the distance between ground and the
+                          topmost point. The variables \(u\), \(g\), and \(t_1\)
+                          have the same meanings as in the first equation.
+                        </p>
+                        <p>
+                          <strong
+                            >3. Equation for Velocity in Terms of
+                            Displacement:</strong
+                          >
+                          \[v_{\text{top}}^2 = u^2 - 2gH\] All variables have
+                          the same meanings as mentioned in above equations
+                        </p>
+                        <p><strong>While Descending</strong></p>
+                        <p>
+                          <strong
+                            >1. Equation for Velocity at Time \(t\):</strong
+                          >
+                          \[v = v_{\text{top}} + gt_2\] Here, \(v\) represents
+                          the velocity of the particle at the time of hitting
+                          the ground which is acheived after time \(t_2\) from
+                          the topmost point.,
+                        </p>
+                        <p>
+                          <strong
+                            >2. Equation for Displacement at Time \(t\):</strong
+                          >
+                          \[H = v_{\text{top}}t_2 + \frac{1}{2}gt_2^2\] The
+                          variables have the same meanings as in the above
+                          equations.
+                        </p>
+                        <p>
+                          <strong
+                            >3. Equation for Velocity in Terms of
+                            Displacement:</strong
+                          >
+                          \[v^2 = v_{\text{top}}^2 + 2gH\] All variables have
+                          the same meanings as mentioned in above equations
+                        </p>
+                        <p>
+                          Now, here comes the intriguing fact that \(
+                          v_{\text{top}} = 0 \). It's your task to determine the
+                          reason behind this.
+                        </p>
+
+                        <div class="text-center">
+                          <img src="vertical-motion.gif" alt="" class="cm" />
+                        </div>
+                        <p>
+                          After solving the equations above, we will be able to
+                          determine... \[\text{Maximum Height, }H =
+                          \frac{u^2}{2g} \] \[t_1 = t_2 = \frac{u}{g} \]
+                          \[\text{Time of Flight} = t_{\text{flight}} = t_1 +
+                          t_2 = \frac{2u}{g} \]
+                        </p>
+                        <p>
+                          <interaction
+                            true-response="Yes, you are right. First of all magnitude will be same for both instants. At the time of hitting velocity will be in downwards direction. So, the final velocity is negative of the inital velocity which is -u."
+                            false-response="No, You're wrong. Think about magnitude and direction both. First of all magnitude will be same for both instants. At the time of hitting velocity will be in downwards direction. So, the final velocity is negative of the inital velocity which is -u."
+                            ansKey="true"
+                          >
+                            A ball is thrown upwards with velocity u. What will
+                            be the velocity at the time of hitting the ground?
+                            <response
+                              class="badge bg-light text-dark"
+                              responseValue="false"
+                            >
+                              u
+                            </response>
+                            <response
+                              class="badge bg-light text-dark"
+                              responseValue="true"
+                            >
+                              -u </response
+                            ><br />
+                            <result> </result>
+                          </interaction>
+                        </p>
+                      </details>
+                    </li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+            <div class="accordion-item" data-read-time="10">
+              <h2 class="accordion-header" id="section-plane-motion">
+                <button
+                  class="accordion-button collapsed"
+                  type="button"
+                  data-bs-toggle="collapse"
+                  data-bs-target="#section-plane-motion-heading"
+                  aria-expanded="false"
+                  aria-controls="section-plane-motion-heading"
+                >
+                  <strong>Motion in a Plane</strong>
+                </button>
+              </h2>
+              <div
+                id="section-plane-motion-heading"
+                class="accordion-collapse collapse"
+                aria-labelledby="section-plane-motion-content"
+                data-bs-parent="#content"
+              >
+                <div class="accordion-body">
+                  <p>
+                    Motion in a plane can be understood as the vector sum of two
+                    independent 1D motions along two mutually perpendicular
+                    directions. These motions in perpendicular directions do not
+                    influence each other.
+                  </p>
+                  <p>
+                    We designate a suitable moment as \(t = 0\) and place the
+                    origin at the location where the particle is positioned at
+                    \(t = 0\). Within this plane, we choose two mutually
+                    perpendicular directions, which we refer to as the X and
+                    Y-axes.
+                  </p>
+                  <p>
+                    The position of the particle at a given time \(t\) is
+                    entirely specified by its coordinates \((x, y)\). The
+                    coordinates at time \(t + \Delta t\) are represented as \((x
+                    + \Delta x, y + \Delta y)\). In Figure, positions at \(t\)
+                    and \(t + \Delta t\) are marked as points A and B,
+                    respectively. The displacement during the time interval from
+                    \(t\) to \(t + \Delta t\) can be determined as the vector
+                    connecting points A and B.
+                  </p>
+                  <div class="text-center">
+                    <img src="plane-motion.png" alt="" class="cm" />
+                  </div>
+                  <p>
+                    \[\Delta{\vec{r}} = \vec{\text{AB}} = \vec{\text{AC}} +
+                    \vec{\text{CB}} \] \[\Delta{\vec{r}} = \Delta{x}\vec{i} +
+                    \Delta{y}\vec{j} \] \[v = \frac{dx}{dt}\vec{i} +
+                    \frac{dy}{dt}\vec{j} \]
+                  </p>
+                  <p>
+                    \(x\) component of velocity can be written as: \(v_x =
+                    \frac{dx}{dt} \) | \(y\) component of velocity can be
+                    written as: \(v_y = \frac{dy}{dt} \)
+                  </p>
+                  <p>
+                    Similarly, \(x\) component of acceleration can be written
+                    as: \(a_x = \frac{dv_x}{dt} \) | \(y\) component of
+                    acceleration can be written as: \(a_y = \frac{dv_y}{dt} \)
+                  </p>
+                  <p>
+                    Thus, if \(a_x \) is constant, the equations of motion we
+                    get: \[v_x = u_x + a_xt \] \[v_x^2 = u_x^2 + 2a_xx \] \[x =
+                    u_xt + \frac{1}{2}a_xt^2 \]
+                  </p>
+                  <p>
+                    Similarly, if \(a_y \) is constant, the equations of motion
+                    we get: \[v_y = u_y + a_yt \] \[v_y^2 = u_y^2 + 2a_yy \] \[y
+                    = u_yt + \frac{1}{2}a_yt^2 \]
+                  </p>
+                </div>
+              </div>
+            </div>
+            <div class="accordion-item" data-read-time="10">
+              <h2 class="accordion-header" id="section-projectile-motion">
+                <button
+                  class="accordion-button collapsed"
+                  type="button"
+                  data-bs-toggle="collapse"
+                  data-bs-target="#section-projectile-motion-heading"
+                  aria-expanded="false"
+                  aria-controls="section-projectile-motion-heading"
+                >
+                  <strong>Projectile Motion</strong>
+                </button>
+              </h2>
+              <div
+                id="section-projectile-motion-heading"
+                class="accordion-collapse collapse"
+                aria-labelledby="section-projectile-motion-content"
+                data-bs-parent="#content"
+              >
+                <div class="accordion-body">
+                  <p>
+                    Projectile motion is a fundamental example of motion in a
+                    two-dimensional plane characterized by constant
+                    acceleration. When an object is launched at an angle to the
+                    Earth's surface, it follows a curved trajectory. This object
+                    is typically referred to as a projectile, and its motion is
+                    described as projectile motion.
+                  </p>
+                  <p>
+                    In our analysis, we will assume that the projectile remains
+                    in close proximity to the Earth's surface, and we'll neglect
+                    the influence of air resistance. Under these conditions, the
+                    acceleration of the projectile is approximately constant,
+                    directed vertically downward, with a magnitude of about 9.8
+                    m/s\(^2 \), typically denoted as \(g\)
+                  </p>
+                  <figure class="text-center">
+                    <img
+                      src="projectile.gif"
+                      class="figure-img img-fluid rounded"
+                      alt="Diagram not loaded"
+                    />
+                    <figcaption class="figure-caption">
+                      Animation: Projectile Motion with Velocity Vectors.
+                    </figcaption>
+                  </figure>
+                  <p>
+                    In below, there is a particle that is launched from a point
+                    labeled as O with an initial velocity denoted as \(u\) at an
+                    angle \(\theta \) with respect to the horizontal direction.
+                    The particle follows a trajectory that takes it to the
+                    highest point labeled as A and eventually lands on the
+                    horizontal surface at point B, directly below the point of
+                    projection, O.
+                  </p>
+                  <figure class="text-center">
+                    <img
+                      src="projec.png"
+                      class="figure-img img-fluid rounded cm"
+                      alt="Diagram not loaded"
+                    />
+                    <figcaption class="figure-caption">
+                      Diagram: Projectile Motion with Velocity Vectors.
+                    </figcaption>
+                  </figure>
+                  <ul>
+                    <li>
+                      <strong>Point O:</strong> This is known as the "point of
+                      projection." It is the location from which the particle is
+                      initially launched.
+                    </li>
+                    <li>
+                      <strong>Angle θ:</strong> This angle is referred to as the
+                      "angle of projection." It specifies the angle at which the
+                      particle is launched with respect to the horizontal plane.
+                    </li>
+                    <li>
+                      <strong>Point A:</strong> This represents the highest
+                      point reached by the projectile.
+                    </li>
+                    <li>
+                      <strong>Point B:</strong> This is where the projectile
+                      lands on the horizontal surface, and it is referred to as
+                      the "horizontal range" or simply "range." It measures the
+                      horizontal distance from the point of projection, O, to
+                      the point of impact, B.
+                    </li>
+                    <li>
+                      <strong>Time of Flight:</strong> This is the total
+                      duration taken by the particle to follow the path from O
+                      to A and then to B. It represents the time interval during
+                      which the projectile is in motion.
+                    </li>
+                  </ul>
+                  <p>
+                    The plane of motion is taken as the X-Y plane. The
+                    horizontal line OX is taken as the X-axis and the vertical
+                    line OY as the Y-axis. Vertically upward direction is taken
+                    as the positive direction of the Y-axis.
+                  </p>
+                  <p>
+                    We have, \(u_x = u\cos\theta \) \(u_y = u\sin\theta \) \(a_x
+                    = 0 \) \(a_y = -g \)
+                  </p>
+                  <div class="row">
+                    <div class="col-lg-6">
+                      <p><strong>Horizontal Motion:</strong></p>
+                      <p>
+                        Equation of motions: \[v_x = u_x + a_xt = u\cos\theta \]
+                        \[x = u_xt + \frac{1}{2}a_xt^2 = ut\cos\theta \] \[v_x^2
+                        = u_x^2 + 2a_x = u^2\cos^2\theta \]
+                      </p>
+                    </div>
+                    <div class="col-lg-6">
+                      <p><strong>Vertical Motion: </strong></p>
+                      <p>
+                        Equation of motions: \[v_y = u_y + a_yt = u\sin\theta -
+                        gt \] \[y = u_yt + \frac{1}{2}a_yt^2 = ut\sin\theta -
+                        \frac{1}{2}gt^2 \] \[v_y^2 = u_y^2 + 2a_yy =
+                        u^2\cos^2\theta - 2gy \]
+                      </p>
+                    </div>
+                  </div>
+                  <p>
+                    Solving above equations we would get following entitites
+                  </p>
+                  <p>
+                    \(\text{Time of flight, }t_f = \frac{2u\cos\theta}{g} \)
+                  </p>
+                  <p>
+                    \(\text{Range, }R = \frac{2u^2\sin\theta\cos\theta}{g} =
+                    \frac{u^2\sin2\theta}{g} \)
+                  </p>
+                  <p>
+                    \(\text{Maximum Height Reached, }H_{\text{max}} =
+                    \frac{u^2\sin^2\theta}{2g} \)
+                  </p>
+                  <p>
+                    <interaction
+                      true-response="Yes, you are right. At only topmost position the acceleration is going to be perpendicular to the velocity. Thus, there is only one instant where acceleration is perpendicular to the velocity."
+                      false-response="No, You're wrong. Imagine a projectile motion with velocity and acceleration vectors. At only topmost position the acceleration is going to be perpendicular to the velocity. Thus, there is only one instant where acceleration is perpendicular to the velocity."
+                      ansKey="true"
+                    >
+                      In a projectile motion the velocity
+                      <response
+                        class="badge bg-light text-dark"
+                        responseValue="false"
+                      >
+                        is always perpendicular to the acceleration
+                      </response>
+                      <response
+                        class="badge bg-light text-dark"
+                        responseValue="true"
+                      >
+                        is perpendicular to the acceleration for one instant
+                        only
+                      </response>
+                      <response
+                        class="badge bg-light text-dark"
+                        responseValue="false"
+                      >
+                        is never perpendicular to the acceleration
+                      </response>
+                      <br />
+                      <result> </result>
+                    </interaction>
+                  </p>
+                </div>
+              </div>
+            </div>
+            <div class="accordion-item" data-read-time="10">
+              <h2 class="accordion-header" id="section-relative-motion">
+                <button
+                  class="accordion-button collapsed"
+                  type="button"
+                  data-bs-toggle="collapse"
+                  data-bs-target="#section-relative-motion-heading"
+                  aria-expanded="false"
+                  aria-controls="section-relative-motion-heading"
+                >
+                  <strong>Relative Motion</strong>
+                </button>
+              </h2>
+              <div
+                id="section-relative-motion-heading"
+                class="accordion-collapse collapse"
+                aria-labelledby="section-relative-motion-content"
+                data-bs-parent="#content"
+              >
+                <div class="accordion-body">
+                  <p>
+                    The word 'relative' is a very general term, which can be
+                    applied to physical, nonphysical, scalar or vector
+                    quantities.
+                  </p>
+                  <p>
+                    For example, earth is at rest relative to us but it is in
+                    motion relative to any other planet or sun. It totally
+                    depends which 'frame of reference' we are chosing to say
+                    whether the earth is at rest or in motion.
+                  </p>
+                  <p>
+                    Let's take another example. My height is 6 ft and yours is 5
+                    ft and The Great Kahli has a height of 7 ft. Relative to me
+                    he is 1 ft ahead of me but relative to you he is ahead of 2
+                    ft.
+                  </p>
+                  <p>
+                    Till yet we are taking all the objects relative to ground.
+                  </p>
+                  <p>
+                    One another beautiful example, You are in a train which is
+                    moving with 100 km/hr with respect to ground. But relative
+                    to you, train is at rest. This can be mathematically
+                    expressed as: \[\text{Speed of Train with respect to Ground:
+                    } V_{\text{Train, Ground}} = 100km/hr \] \[\text{Speed of Train with respect to You: } V_{\text{Train, You}} = 0 \]
+                  </p>
+                  <p>
+                    Imagine two frames of reference, denoted as S and S′, each
+                    potentially in relative motion with respect to the other.
+                    Within this scenario, let's observe a particle named P from
+                    both frames. The figure visually represents this situation.
+                  </p>
+                  <figure class="text-center">
+                    <img
+                      src="for.png"
+                      class="figure-img img-fluid rounded cm"
+                      alt="Diagram not loaded"
+                    />
+                    <figcaption class="figure-caption">Diagram: .</figcaption>
+                  </figure>
+                  <p>
+                    The position vector of particle P with respect to frame \(S
+                    \) is represented as \(\vec{r}_\text{P,S} \) = \(\vec{OP}
+                    \). Similarly, the position vector of the particle with
+                    respect to frame \(S' \) is given as \(\vec{r}_{\text{P,S'}}
+                    \) = \(\vec{\text{O'P}} \). Additionally, the position of
+                    frame \(S' \), which is essentially the origin of frame \(S'
+                    \), with respect to frame \(S \) is denoted as
+                    \(\vec{\text{OO'}} \).
+                  </p>
+                  <p>
+                    It can be observed that \[\vec{OP} = \vec{OO'} + \vec{O'P} =
+                    \vec{O'P} + \vec{OO'} \] \[\vec{r}_\text{P,S} =
+                    \vec{r}_\text{P,S'} + \vec{r}_\text{S,S'} \] The position of
+                    the particle with respect to \(S\) is equal to the position
+                    of the particle with respect to \(S'\) plus the position of
+                    \(S'\) with respect to \(S\).
+                  </p>
+                  <p>
+                    Differentiating the above and we will get:
+                    \[\vec{v}_\text{P,S} = \vec{v}_\text{P,S'} +
+                    \vec{v}_\text{S,S'} \]
+                  </p>
+                  <div class="row">
+                    <p>
+                      For simple explanation try to figure out the relation
+                      between two bodies bodies \(A\), \(B\) and Ground \(G\)
+                    </p>
+                    <div class="col-lg-4">
+                      For Position: \[\vec{r}_\text{A,B} = \vec{r}_\text{A,G} -
+                      \vec{r}_\text{B,G} \]
+                    </div>
+                    <div class="col-lg-4">
+                      For Velocity: \[\vec{v}_\text{A,B} = \vec{v}_\text{A,G} -
+                      \vec{v}_\text{B,G} \]
+                    </div>
+                    <div class="col-lg-4">
+                      For Acceleration: \[\vec{a}_\text{A,B} =
+                      \vec{a}_\text{A,G} - \vec{a}_\text{B,G} \]
+                    </div>
+                  </div>
+                  <ul class="list-group list-group-flush">
+                    <strong>Type of Questions Based on Relative Motion:</strong>
+                    <li class="list-group-item d-flex">
+                      <details>
+                        <summary>
+                          <strong>Minimum separation between two bodies</strong>
+                        </summary>
+                        <p>
+                          When two bodies are in motion, questions such as
+                          determining the minimum distance between them or the
+                          time at which one body overtakes the other can be
+                          readily solved using the principle of relative motion.
+                          In these types of problems, one body is typically
+                          treated as if it were at rest, and the motion of the
+                          other body is analyzed relative to this assumed
+                          stationary reference. This simplifies the problem,
+                          effectively converting a two-body problem into a
+                          one-body problem, making it easier to find a solution.
+                        </p>
+                        <p>
+                          Following example will clarify the above statement
+                        </p>
+                        <p>
+                          <strong
+                            >Question: Car A and car B start moving simultaneously in the
+                            same direction along the line joining them. Car A
+                            with a constant acceleration a = 4 \(m/s^2\) , while
+                            car B moves with a constant velocity v = 1 \(m/s\).
+                            At time t = 0, car A is 10 \(m\) behind car B. Find
+                            the time when car A overtakes car B.</strong
+                          >
+                          <br />
+                          <strong>Solution:</strong> Given, \(u_A = 0\), \(u_B =
+                          1m/s\), \(a_A = 4 m/s^2 \) and \(a_B = 0\).
+                          <br />
+                          We will solve this relative to A, we have
+                          <br />
+                          \(u_{\text{AB}} = u_A - u_B = 0-1 = -1 m/s \)
+                          <br />
+                          \(a_{\text{AB}} = a_A - a_B = 4-0 = 4 m/s^2 \)
+                          <br />
+                          Initially A is 10 m behind B. Then \[s = ut +
+                          \frac{1}{2}at^2 \] \[10 = -t + \frac{1}{2}4t^2 \]
+                          \[2t^2 -t -10 = 0 \] \[t = 2.5 s \text{ and} -2s \]
+                          Ignoring the negative value, the desired time is 2.5s.
+                        </p>
+                      </details>
+                    </li>
+                    <li class="list-group-item d-flex">
+                      <details>
+                        <summary>
+                          <strong>River-Boat Or River-Swimmer Problems</strong>
+                        </summary>
+                        <p>
+                          In river-boat problems we come across the following
+                          three terms :
+                        </p>
+                        <figure class="text-center">
+                          <img
+                            src="rsp1.png"
+                            class="figure-img img-fluid rounded cm"
+                            alt="Diagram not loaded"
+                          />
+                          <img
+                            src="rsp2.png"
+                            class="figure-img img-fluid rounded cm"
+                            alt="Diagram not loaded"
+                          />
+                          <figcaption class="figure-caption">
+                            Diagram: Swimmer and River as viewed from top with
+                            their velocity vectors.
+                          </figcaption>
+                        </figure>
+                        <p>
+                          \(\vec{V}_{\text{S,R}} \): Velocity of Swimmer
+                          relative to River
+                        </p>
+                        <p>
+                          \(\vec{V}_{\text{S,G}} \): Velocity of Swimmer
+                          relative to Ground
+                        </p>
+                        <p>
+                          \(\vec{V}_{\text{R,G}} \): Velocity of River relative
+                          to Ground
+                        </p>
+                      </details>
+                    </li>
+                    <li class="list-group-item d-flex">
+                      <details>
+                        <summary>
+                          <strong>Rain-Main Problem</strong>
+                        </summary>
+                        <p>
+                          In this scenario problems we come across the following
+                          three terms : <br />\(\vec{V}_{\text{R,M}} \):
+                          Velocity of Swimmer relative to River
+                          <br />\(\vec{V}_{\text{M,G}} \): Velocity of Swimmer
+                          relative to Ground <br />
+                          \(\vec{V}_{\text{R,G}} \): Velocity of River relative
+                          to Ground
+                        </p>
+                        <figure class="text-center">
+                          <img
+                            src="rain-man.png"
+                            class="figure-img img-fluid rounded cm"
+                            alt="Diagram not loaded"
+                          />
+                          <figcaption class="figure-caption">
+                            Diagram: Rain Man scenario.
+                          </figcaption>
+                        </figure>
+                      </details>
+                    </li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+            <div class="accordion-item" data-read-time="10">
+              <h2 class="accordion-header" id="section-what-next">
+                <button
+                  class="accordion-button collapsed"
+                  type="button"
+                  data-bs-toggle="collapse"
+                  data-bs-target="#section-what-next-heading"
+                  aria-expanded="false"
+                  aria-controls="section-what-next-heading"
+                >
+                  <strong>What's Next?</strong>
+                </button>
+              </h2>
+              <div
+                id="section-what-next-heading"
+                class="accordion-collapse collapse"
+                aria-labelledby="section-what-next-content"
+                data-bs-parent="#content"
+              >
+                <div class="accordion-body">
+                  <p>
+                    Solve as many Kinematics questions as you can. Think of this
+                    as the ingredients, and your job is to cook them into a
+                    satisfying meal to kill your hunger for knowledge.
+                  </p>
+                  <p>
+                    I am pleased that you have thoroughly reviewed the theory. I
+                    kindly request that you take a moment to share your thoughts
+                    on its usefulness. To provide feedback and rate the content
+                    you've studied, please click the following link to send me a
+                    WhatsApp message. Feel free to share any suggestions you may
+                    have to enhance the content's utility. Your input is greatly
+                    appreciated.
+                  </p>
+                  <p>
+                    <a
+                      href="https://wa.me/917738888281?text=Dear%20writer,%0AI%20read%20your%20content%20on%20Kinematics.%20My%20ratings%20for%20the%20content%20is%20____%20out%20of%205.%0AI%20have%20the%20following%20suggestions:%0A1.%20------%0A2.%20------"
+                      >Send WhatsApp Message To Writer</a
+                    >
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <script src="kinematics.js"></script>
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
+      crossorigin="anonymous"
+    ></script>
+    <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+    <script
+      id="MathJax-script"
+      async
+      src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"
+    ></script>
+  </body>
+</html>

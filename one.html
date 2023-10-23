@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Projectile Motion Animation</title>
+  <style>
+    #container {
+      position: relative;
+      width: 600px;
+      height: 400px;
+      border: 1px solid #000;
+      overflow: hidden;
+    }
+    #projectile {
+      position: absolute;
+      width: 20px;
+      height: 20px;
+      background-color: red;
+      border-radius: 50%;
+    }
+    #initial-velocity {
+      position: absolute;
+      width: 2px;
+      height: 40px;
+      background-color: blue;
+      transform-origin: 0 0;
+      transform: rotate(45deg);
+    }
+  </style>
+</head>
+<body>
+  <div id="container">
+    <div id="projectile"></div>
+    <div id="initial-velocity"></div>
+  </div>
+  <button id="startButton">Start Animation</button>
+  <script>
+    const container = document.getElementById('container');
+    const projectile = document.getElementById('projectile');
+    const initialVelocity = document.getElementById('initial-velocity');
+    const startButton = document.getElementById('startButton');
+    
+    // Initial conditions
+    const u = 10; // Initial velocity
+    const g = 9.81; // Acceleration due to gravity
+    const angle = 45; // Launch angle in degrees
+
+    // Convert angle to radians
+    const angleRad = (angle * Math.PI) / 180;
+
+    // Calculate horizontal and vertical components of initial velocity
+    const uX = u * Math.cos(angleRad);
+    const uY = u * Math.sin(angleRad);
+
+    // Time step and initial time
+    const dt = 0.05;
+    let t = 0;
+
+    // Initial position
+    let x = 0;
+    let y = 0;
+    
+    let animationInterval;
+
+    // Animation loop
+    function animateProjectile() {
+      // Update position
+      x = uX * t;
+      y = uY * t - (0.5 * g * t * t);
+
+      // Update projectile position
+      projectile.style.left = x + 'px';
+      projectile.style.top = (container.clientHeight - y - 20) + 'px';
+
+      // Update initial velocity vector position
+      initialVelocity.style.left = '0';
+      initialVelocity.style.top = (container.clientHeight - y) + 'px';
+
+      // Stop the animation when the projectile hits the ground
+      if (y <= 0) {
+        clearInterval(animationInterval);
+        startButton.disabled = false; // Re-enable the button
+      }
+
+      t += dt;
+    }
+
+    startButton.addEventListener('click', () => {
+      // Start the animation when the button is clicked
+      animationInterval = setInterval(animateProjectile, dt * 1000);
+      startButton.disabled = true; // Disable the button to prevent starting multiple animations
+    });
+  </script>
+</body>
+</html>
